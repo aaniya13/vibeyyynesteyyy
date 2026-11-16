@@ -1,0 +1,242 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: #0b0715;
+    color: #f8eaff;
+    line-height: 1.7;
+}
+
+header {
+    text-align: center;
+    padding: 35px 20px;
+    background: linear-gradient(135deg, #25103d, #10091f);
+    border-bottom: 1px solid #a56bff;
+}
+
+header h1 {
+    color: #ff5de8;
+    font-size: 42px;
+    letter-spacing: 3px;
+}
+
+header p {
+    color: #d5b5ff;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding: 18px;
+    background: #160d25;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: #e8caff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff5de8;
+}
+
+.hero {
+    min-height: 430px;
+    padding: 100px 20px;
+    text-align: center;
+    background: radial-gradient(circle, #35134d, #0b0715 75%);
+}
+
+.hero h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.hero h2 span {
+    color: #ff5de8;
+}
+
+.hero p {
+    color: #d5b5ff;
+    margin-bottom: 30px;
+}
+
+.main-btn, button {
+    display: inline-block;
+    padding: 13px 28px;
+    background: linear-gradient(135deg, #ff5de8, #a56bff);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main-btn:hover, button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px #ff5de8;
+}
+
+.theory, .demo, .code-section, .about {
+    padding: 65px 10%;
+    text-align: center;
+}
+
+h2 {
+    color: #ff5de8;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.theory > p, .about p, .demo > p {
+    color: #d5b5ff;
+    max-width: 850px;
+    margin: 0 auto 30px;
+}
+
+.info-card {
+    display: inline-block;
+    width: 40%;
+    min-width: 230px;
+    margin: 15px;
+    padding: 28px;
+    background: linear-gradient(145deg, #28153d, #140d22);
+    border: 1px solid #a56bff;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px #a56bff;
+}
+
+.info-card h3 {
+    color: #ff5de8;
+    margin-bottom: 10px;
+}
+
+.demo {
+    background: #160d25;
+}
+
+.output {
+    max-width: 650px;
+    margin: 35px auto 0;
+    padding: 25px;
+    background: #0b0715;
+    border: 1px solid #ff5de8;
+    border-radius: 18px;
+    min-height: 120px;
+}
+
+.output h3 {
+    color: #d5b5ff;
+    margin-bottom: 10px;
+}
+
+#result {
+    color: #ff9bea;
+    font-size: 18px;
+}
+
+pre {
+    text-align: left;
+    max-width: 700px;
+    margin: 25px auto;
+    padding: 25px;
+    overflow-x: auto;
+    background: #160d25;
+    border: 1px solid #a56bff;
+    border-radius: 15px;
+    color: #e8caff;
+    font-size: 15px;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #160d25;
+    color: #d5b5ff;
+    border-top: 1px solid #a56bff;
+}
+
+@media (max-width: 600px) {
+    nav {
+        gap: 13px;
+        flex-wrap: wrap;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .info-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .theory, .demo, .code-section, .about {
+        padding: 45px 6%;
+    }
+}
+
+
+/* ======================================
+   VIBEWAVE EXTRA FINISHING TOUCHES
+====================================== */
+
+.demo button {
+    margin: 10px;
+    min-width: 190px;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.output {
+    transition: 0.4s ease;
+    box-shadow: 0 0 15px rgba(255, 93, 232, 0.12);
+}
+
+.output:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(255, 93, 232, 0.3);
+}
+
+.info-card h3 {
+    text-shadow: 0 0 12px rgba(255, 93, 232, 0.35);
+}
+
+.hero h2 {
+    animation: fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button:active {
+    transform: scale(0.95);
+}
